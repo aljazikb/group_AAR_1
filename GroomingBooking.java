@@ -10,4 +10,18 @@
  */
 public class GroomingBooking extends Booking {
     
+ private String petType;
+
+    public GroomingBooking(String clientName, String date, String time, String petType) {
+        super(clientName, date, time);
+        this.petType = petType;
+    }
+
+    @Override
+    public void displayDetails() {
+        System.out.println("\n--- Grooming Appointment ---");
+        System.out.println("Client: " + clientName);
+        System.out.println("Pet Type: " + petType);
+        System.out.println("Date: " + date + " | Time: " + time);
+    }   
 }

@@ -10,4 +10,18 @@
  */
 public class HomeVisitBooking extends Booking {
     
-}
+    private String address;
+
+    public HomeVisitBooking(String clientName, String date, String time, String address) {
+        super(clientName, date, time);
+        this.address = address;
+    }
+
+    @Override
+    public void displayDetails() {
+        System.out.println("\n--- Home Visit Appointment ---");
+        System.out.println("Client: " + clientName);
+        System.out.println("Address: " + address);
+        System.out.println("Date: " + date + " | Time: " + time);
+    }
+} 

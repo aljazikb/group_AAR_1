@@ -9,5 +9,17 @@
  * @author aljaz
  */
 public abstract class Booking {
-    
+    protected String clientName;
+    protected String date;
+    protected String time;
+
+    public Booking(String clientName, String date, String time) {
+        this.clientName = clientName;
+        this.date = date;
+        this.time = time;
+    }
+
+    public abstract void displayDetails();
 }
+    
+
